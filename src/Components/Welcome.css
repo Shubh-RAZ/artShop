@@ -1,0 +1,209 @@
+.welcome {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ef5a50;
+}
+
+.content-welcome {
+  text-align: left;
+}
+
+.jelly {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: -300px;
+  right: 5vw;
+  animation: jelly 5s linear 1 forwards;
+  transition: all 5s;
+}
+
+@keyframes jelly {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.welcome-1 {
+  text-transform: uppercase;
+  font-family: Rokkitt;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 96px;
+  line-height: 109px;
+  color: #ffffff;
+  animation: greet 5s linear 1 forwards;
+  opacity: 0;
+}
+
+.welcome-sm {
+  display: none;
+}
+
+.welcome-2 {
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 64px;
+  /* identical to box height */
+  color: #ffffff;
+  animation: greet 10s linear 1 forwards;
+  opacity: 0;
+}
+
+@media (max-width: 1000px) {
+  .welcome-1 {
+    font-size: 80px;
+    line-height: 90px;
+  }
+
+  .welcome-2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .jelly {
+    width: 200px;
+    height: 200px;
+    bottom: -200px;
+  }
+
+  .welcome-1 {
+    font-size: 70px;
+    line-height: 75px;
+  }
+
+  .welcome-2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 700px) {
+  .jelly {
+    width: 200px;
+    height: 200px;
+    bottom: -200px;
+  }
+
+  .welcome-1 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+
+  .welcome-2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .welcome-1 {
+    display: none;
+  }
+
+  .welcome-sm {
+    display: grid;
+  }
+
+  .greet {
+    text-transform: uppercase;
+    font-family: Rokkitt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 65px;
+    color: #ffffff;
+  }
+
+  .name {
+    text-transform: uppercase;
+    font-family: Rokkitt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 65px;
+    color: #ffffff;
+  }
+  .jelly {
+    width: 200px;
+    height: 200px;
+    bottom: -200px;
+  }
+
+  .welcome-1 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+
+  .welcome-2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 470px) {
+  .greet {
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .name {
+    font-size: 50px;
+    line-height: 55px;
+  }
+  .jelly {
+    width: 200px;
+    height: 200px;
+    bottom: -200px;
+  }
+}
+@media (max-width: 400px) {
+  .greet {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .name {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .jelly {
+    width: 200px;
+    height: 200px;
+    bottom: -200px;
+  }
+}
+
+@keyframes greet {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
