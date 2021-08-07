@@ -122,7 +122,7 @@ class Login extends Component {
                 {/* <button type="submit" onClick={this.handleSubmit}>Login</button> */}
                 {/*  */}
                 <GoogleLogin
-                    clientId="493377956250-r6vuhl5hvkqcguvbok7frl1ceb2oge2r.apps.googleusercontent.com"
+                    clientId="695016441089-rrvns23b8bu4e37cttalfjutgfc4n74p.apps.googleusercontent.com"
                     render={renderProps => (
                     <div onClick={renderProps.onClick} color='primary' className="login-google">Signin With Google</div>
                     )}
