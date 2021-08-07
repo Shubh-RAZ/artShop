@@ -1,17 +1,23 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Jelly from "./Assets/jelly"
 import axios from "axios";
 import './Welcome.css'
+import Home from "./Home";
 const Welcome = () => {
 
     const [ id , setId ] = useState()
     const [ name , setName ] = useState()
     const [ showName , setShowName ] = useState(false)
+    const [ greeting , setGreeting ] = useState(true)
 
     useEffect( () => {
         const token = localStorage.getItem('token')
+
+        setTimeout( () => {
+            setGreeting(false)
+        } , 10000)
         if ( token && token.length >= 4){
-            axios.post('http://artwindow.herokuapp.com/art/verifyUser', {
+            axios.post('http://localhost:3500/art/verifyUser', {
                 token
             })
             .then ( res => {
@@ -20,7 +26,7 @@ const Welcome = () => {
                 }
                 else{
                     setId(res.data)
-                    axios.post('http://artwindow.herokuapp.com/art/getUser', {id :res.data})
+                    axios.post('http://localhost:3500/art/getUser', {id :res.data})
                     .then ( resp => {
                         setShowName(true)
                         setName(resp.data.name)
@@ -45,6 +51,8 @@ const Welcome = () => {
  
     } , [])
     return ( 
+        <React.Fragment>
+       { greeting ?
         <div className="welcome">
            <div className="content-welcome">
                 <div className="welcome-1">hey {name}</div>
@@ -58,7 +66,8 @@ const Welcome = () => {
             <div className="jelly">
                 <Jelly></Jelly>
             </div>
-        </div>
+        </div> : <Home></Home>  }
+        </React.Fragment>
      );
 }
  

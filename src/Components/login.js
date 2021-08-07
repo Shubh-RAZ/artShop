@@ -20,7 +20,7 @@ class Login extends Component {
 
     componentDidMount() {
       const token = localStorage.getItem('token')
-      axios.post('http://artwindow.herokuapp.com/art/verifyUser', {
+      axios.post('http://localhost:3500/art/verifyUser', {
           token
       })
       .then ( res => {
@@ -46,7 +46,7 @@ class Login extends Component {
             email : this.state.account.email,
             password : this.state.account.password,
         }
-        axios.post('http://artwindow.herokuapp.com/art/loginUser', data)
+        axios.post('http://localhost:3500/art/loginUser', data)
         .then((res) => {
             if( res.data !== 'failure'){
                 localStorage.setItem('token' , res.data)
@@ -81,18 +81,27 @@ class Login extends Component {
                 email : result.email,
                 name: result.familyName
             }
-            const res = await axios.post('http://artwindow.herokuapp.com/art/createUser', data);
-            console.log(res.data[0])
+            const res = await axios.post('http://localhost:3500/art/createUser', data);
             if(res.data[0].message === 'success'){
                 localStorage.setItem('token' , res.data[0].token)
-                this.props.history.push('/welcome');
+                toast(`Signup successfull`)
+                window.location.assign('/welcome')
             }
-            else{
-                toast(`Login Failed`)
+            if(res.data[0].message === 'User Already Exists'){
+                toast(`Signup successfull`)
+                window.location.assign('/welcome')
+            }
+            
+            if(res.data === 'failure'){
+                toast('Login Failed')
+            }
+      
+            if(res.data === 'failed'){
+                toast('Login Failed')
             }
         }   
         catch(error){
-            console.log(error);
+            toast(`Login Failed`)
         }
     }
 

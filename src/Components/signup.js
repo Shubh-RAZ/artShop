@@ -22,28 +22,95 @@ class Signup extends Component {
         this.setState({ account });
     }
 
+    
+    validateEmail = (email)  =>{
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    validateUsername = (username)  =>{
+        const re = /^[A-Za-z0-9]+$/
+        return re.test(String(username));
+    }
+
+    validate = ({ email , name , password }) => {
+        var errobool = false
+
+        const emailresult = this.validateEmail(email)
+        if(!emailresult){
+            errobool=true
+        }
+   
+        if(name.length === 0){
+            errobool=true
+        }
+
+        if(password.length === 0){
+            errobool=true
+        }
+
+       return errobool
+        
+    }
+
     handleSubmit = (e) => {
         e.preventDefault();
-
-        if( this.state.account.password === this.state.account.passwordCheck){
-            
         const data = {
             email : this.state.account.email,
             password : this.state.account.password,
             name : this.state.account.name,
         }
-        axios.post('http://artwindow.herokuapp.com/art/createUser', data)
+
+        if(!this.validate(data)){
+        if( this.state.account.password === this.state.account.passwordCheck){
+            
+     
+        axios.post('http://localhost:3500/art/createUser', data)
         .then((res) => {
             //redirect
-          
-            let account = {...this.state.account};
-            account.email = ""
-            account.name = ""
-            account.password = ""
-            account.passwordCheck = ""
-            this.setState({account})
-            toast(`Signup successfull`)
-            window.location.assign('/')
+          console.log(res.data)
+            if(res.data[0].message === 'success'){
+                let account = {...this.state.account};
+                account.email = ""
+                account.name = ""
+                account.password = ""
+                account.passwordCheck = ""
+                this.setState({account})
+                toast(`Signup successfull`)
+                window.location.assign('/')
+                localStorage.removeItem('token')
+            }
+            if(res.data[0].message === 'User Already Exists'){
+                let account = {...this.state.account};
+                account.email = ""
+                account.name = ""
+                account.password = ""
+                account.passwordCheck = ""
+                this.setState({account})
+                toast(`User Already Exists`)
+                localStorage.removeItem('token')
+            }
+            
+            if(res.data === 'failure'){
+                let account = {...this.state.account};
+                account.email = ""
+                account.name = ""
+                account.password = ""
+                account.passwordCheck = ""
+                this.setState({account})
+                toast('Signup Failed')
+            }
+      
+            if(res.data === 'failed'){
+                let account = {...this.state.account};
+                account.email = ""
+                account.name = ""
+                account.password = ""
+                account.passwordCheck = ""
+                this.setState({account})
+                toast('Signup Failed')
+            }
+      
         })
         .catch((err) => {
             //toast
@@ -65,6 +132,16 @@ class Signup extends Component {
             this.setState({account})
             toast("Passwords don't match")
         }
+    }
+    else{
+        let account = {...this.state.account};
+        account.email = ""
+        account.name = ""
+        account.password = ""
+        account.passwordCheck = ""
+        this.setState({account})
+        toast('Please Check your Data Once Again')
+    }
 
     }
 
