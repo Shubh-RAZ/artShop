@@ -65,7 +65,7 @@ class Signup extends Component {
         if( this.state.account.password === this.state.account.passwordCheck){
             
      
-        axios.post('http://localhost:3500/art/createUser', data)
+        axios.post('http://artwindow.herokuapp.com/art/createUser', data)
         .then((res) => {
             //redirect
           console.log(res.data)

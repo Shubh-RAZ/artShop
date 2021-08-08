@@ -1,0 +1,162 @@
+.logo-nav {
+  width: 200px;
+  height: 70px;
+  position: absolute;
+  left: 0px;
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 60px;
+}
+
+.navbar-phone {
+  display: none;
+  width: 100%;
+  height: 70px;
+}
+
+.navbar-desktop {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
+
+.navbar-content {
+  display: flex;
+}
+
+.navbar-list {
+  font-family: Red Hat Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #fff;
+  margin-right: 35px;
+  letter-spacing: 3px;
+}
+
+.active-navbar-list {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #682ae9;
+  margin-right: 35px;
+}
+
+.hamburger-phone-list {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #682ae9;
+  margin-right: 35px;
+}
+
+.phone-menu-content {
+  /* border: 2px solid red; */
+  width: 100vw;
+  height: 50%;
+  display: grid;
+}
+
+@media (max-width: 850px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .logo-nav-phone {
+    z-index: 2;
+  }
+
+  .phone-menu {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    padding-top: 7vh;
+    top: 0;
+    background: #000;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    transition: 2s all ease-in-out;
+  }
+
+  .hidden-menu {
+    width: 0;
+    height: 100vh;
+    display: none;
+  }
+
+  .jelly {
+    position: absolute;
+    bottom: -10vh;
+    right: 5vw;
+  }
+
+  .navbar-phone {
+    display: flex;
+    /* border: 2px solid red; */
+    width: 100vw;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hamburger {
+    width: 30px;
+    height: 35px;
+    /* border: 2px solid red; */
+    position: absolute;
+    right: 10vw;
+    top: 15px;
+    display: grid;
+    z-index: 2;
+  }
+
+  .hamline {
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 2s;
+  }
+
+  .animateham:nth-child(2) {
+    opacity: 0;
+    transition: all 2s;
+  }
+
+  .animateham:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 2s;
+    transform: rotate(30deg);
+  }
+
+  .animateham:nth-child(3) {
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 2s;
+    transform: rotate(150deg);
+    position: relative;
+    bottom: 7px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hamburger {
+    right: 10vw;
+  }
+}

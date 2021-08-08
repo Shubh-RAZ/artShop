@@ -1,0 +1,180 @@
+.conclude {
+  margin-top: 150px;
+}
+.conclude-slogan {
+  display: flex;
+  align-items: center;
+  margin-left: 10vw;
+  width: fit-content;
+}
+
+.text-conclude {
+  font-family: Sansita;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #000000;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.heart-conclude {
+  width: 30px;
+  height: 30px;
+}
+
+.flask {
+  width: 50px;
+  height: 50px;
+}
+
+.dino-conclude-sm {
+  width: 250px;
+  height: 250px;
+  display: none;
+}
+
+.dino-conclude {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 1150px) {
+  .text-conclude {
+    font-size: 30px;
+  }
+  .conclude-slogan {
+    margin-left: 5vw;
+  }
+}
+@media (max-width: 950px) {
+  .text-conclude {
+    font-size: 30px;
+  }
+  .conclude-slogan {
+    margin-left: 5vw;
+    width: 70%;
+    /* border: 2px solid red; */
+  }
+
+  .dino-conclude {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 850px) {
+  .text-conclude {
+    font-size: 25px;
+  }
+  .conclude-slogan {
+    margin-left: 5vw;
+    width: 70%;
+    /* border: 2px solid red; */
+  }
+
+  .dino-conclude {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 650px) {
+  .conclude {
+    margin-top: 50px;
+  }
+  .text-conclude {
+    font-size: 20px;
+  }
+  .conclude-slogan {
+    margin-left: 5vw;
+    width: 90%;
+    margin: auto;
+    /* border: 2px solid red; */
+    text-align: center;
+    justify-content: center;
+
+    /* border: 2px solid red; */
+  }
+
+  .dino-conclude-sm {
+    position: absolute;
+    right: 0;
+  }
+
+  .dino-conclude {
+    width: 200px;
+    height: 200px;
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .conclude {
+    margin-top: 50px;
+  }
+  .text-conclude {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .conclude-slogan {
+    margin-left: 5vw;
+    width: 100%;
+    margin: auto;
+    /* border: 2px solid red; */
+    text-align: center;
+    justify-content: center;
+
+    /* border: 2px solid red; */
+  }
+
+  .dino-conclude-sm {
+    position: absolute;
+    right: 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  .dino-conclude {
+    width: 200px;
+    height: 200px;
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .conclude {
+    margin-top: 50px;
+  }
+  .text-conclude {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .conclude-slogan {
+    margin-left: 0vw;
+    width: 100%;
+    margin: auto;
+    /* border: 2px solid red; */
+    text-align: center;
+    justify-content: center;
+
+    /* border: 2px solid red; */
+  }
+
+  .dino-conclude-sm {
+    position: absolute;
+    right: 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  .dino-conclude {
+    width: 200px;
+    height: 200px;
+    display: none;
+  }
+}

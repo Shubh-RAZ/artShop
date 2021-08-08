@@ -8,7 +8,7 @@ const Welcome = () => {
     const [ id , setId ] = useState()
     const [ name , setName ] = useState()
     const [ showName , setShowName ] = useState(false)
-    const [ greeting , setGreeting ] = useState(true)
+    const [ greeting , setGreeting ] = useState(false)
 
     useEffect( () => {
         const token = localStorage.getItem('token')
@@ -17,7 +17,7 @@ const Welcome = () => {
             setGreeting(false)
         } , 10000)
         if ( token && token.length >= 4){
-            axios.post('http://localhost:3500/art/verifyUser', {
+            axios.post('http://artwindow.herokuapp.com/art/verifyUser', {
                 token
             })
             .then ( res => {
@@ -26,7 +26,7 @@ const Welcome = () => {
                 }
                 else{
                     setId(res.data)
-                    axios.post('http://localhost:3500/art/getUser', {id :res.data})
+                    axios.post('http://artwindow.herokuapp.com/art/getUser', {id :res.data})
                     .then ( resp => {
                         setShowName(true)
                         setName(resp.data.name)

@@ -1,0 +1,41 @@
+.card-box {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  overflow: hidden;
+  /* justify-content: center; */
+  text-align: left;
+}
+
+.pagination {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  /* border: 2px solid red; */
+}
+
+.pagination-list {
+  width: 30px;
+  height: 30px;
+  border: 2px solid salmon;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: salmon;
+  margin-right: 35px;
+  cursor: pointer;
+}
+
+.pagination-list-active {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-right: 15px;
+}

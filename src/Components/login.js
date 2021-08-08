@@ -20,7 +20,7 @@ class Login extends Component {
 
     componentDidMount() {
       const token = localStorage.getItem('token')
-      axios.post('http://localhost:3500/art/verifyUser', {
+      axios.post('http://artwindow.herokuapp.com/art/verifyUser', {
           token
       })
       .then ( res => {
@@ -46,7 +46,7 @@ class Login extends Component {
             email : this.state.account.email,
             password : this.state.account.password,
         }
-        axios.post('http://localhost:3500/art/loginUser', data)
+        axios.post('http://artwindow.herokuapp.com/art/loginUser', data)
         .then((res) => {
             if( res.data !== 'failure'){
                 localStorage.setItem('token' , res.data)
@@ -81,7 +81,7 @@ class Login extends Component {
                 email : result.email,
                 name: result.familyName
             }
-            const res = await axios.post('http://localhost:3500/art/createUser', data);
+            const res = await axios.post('http://artwindow.herokuapp.com/art/createUser', data);
             if(res.data[0].message === 'success'){
                 localStorage.setItem('token' , res.data[0].token)
                 toast(`Signup successfull`)
