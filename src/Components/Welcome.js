@@ -22,7 +22,8 @@ const Welcome = () => {
             })
             .then ( res => {
                 if( res.data === 'failure'){
-                    window.location.assign('/')
+                    // window.location.assign('/')
+                    console.log('failed')
                 }
                 else{
                     setId(res.data)
@@ -44,7 +45,8 @@ const Welcome = () => {
             })
         }
         else{
-            window.location.assign('/')
+            // window.location.assign('/')
+            console.log('failed')
         }
 
    
