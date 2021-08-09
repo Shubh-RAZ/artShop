@@ -52,13 +52,13 @@ const Navbar = (props) => {
         <div className="Navbar">
             <div className="navbar-desktop">
                 <div className="logo-nav">
-                    <Logo></Logo>
+                    <Logo color={props.secondaryColor}></Logo>
                 </div>
                 <div className="navbar-content">
-                <Link to="/" style={{textDecoration:'none'}}> <div className={ props.active === "home" ? "active-navbar-list" : "navbar-list" }>Home </div> </Link>
-                    <Link to="/bout" style={{textDecoration:'none'}}>  <div className={ props.active === "about" ? "active-navbar-list" : "navbar-list" }>About us</div> </Link>
-                  <Link to="/reach" style={{textDecoration:'none'}}>  <div className={ props.active === "contact" ? "active-navbar-list" : "navbar-list" }>Contact us</div> </Link>
-                  <Link to="/projects" style={{textDecoration:'none'}}> <div className={ props.active === "projects" ? "active-navbar-list" : "navbar-list" }>Cart</div> </Link>
+                <Link to="/" style={{textDecoration:'none'}}> <div className={ props.active === "home" ? "active-navbar-list" : "navbar-list" }style={{color: props.active === 'home' ? props.activeColor : props.secondaryColor}} >Home </div> </Link>
+                    <Link to="/bout" style={{textDecoration:'none'}}>  <div className={ props.active === "about" ? "active-navbar-list" : "navbar-list" } style={{color: props.active === 'about' ? props.activeColor : props.secondaryColor}}>About us</div> </Link>
+                  <Link to="/reach" style={{textDecoration:'none'}}>  <div className={ props.active === "contact" ? "active-navbar-list" : "navbar-list" } style={{color: props.active === 'contact' ? props.activeColor : props.secondaryColor}}>Contact us</div> </Link>
+                  <Link to="/cart" style={{textDecoration:'none'}}> <div className={ props.active === "projects" ? "active-navbar-list" : "navbar-list" } style={{color: props.active === 'cart' ? props.activeColor : props.secondaryColor}}>Cart</div> </Link>
                   <div className="logout">
                       <div className="inside-log">
                       <div className="logout-svg" onClick={handleLogout}> <Logout></Logout></div>
@@ -76,9 +76,9 @@ const Navbar = (props) => {
                 </div>
 
                 <div className="hamburger" onClick={() => setPhoneMenu(!showPhoneMenu)}>
-                    <div className={ showPhoneMenu ? "animateham" : "hamline" } ></div>
-                    <div className={ showPhoneMenu ? "animateham" : "hamline" }></div>
-                    <div className={ showPhoneMenu ? "animateham" : "hamline" }></div>
+                    <div className={ showPhoneMenu ? "animateham" : "hamline" } style={{background:props.secondaryColor}} ></div>
+                    <div className={ showPhoneMenu ? "animateham" : "hamline" } style={{background:props.secondaryColor}}></div>
+                    <div className={ showPhoneMenu ? "animateham" : "hamline" } style={{background:props.secondaryColor}}></div>
                 </div>
 
                     <div className={showPhoneMenu ? "phone-menu" : "hidden-menu" }>
@@ -86,7 +86,7 @@ const Navbar = (props) => {
                        <Link to="/" style={{textDecoration:'none'}}>     <div className="hamburger-phone-list">Home</div> </Link>
                        <Link to="/bout" style={{textDecoration:'none'}}>   <div className="hamburger-phone-list">About us</div> </Link>
                        <Link to="/reach" style={{textDecoration:'none'}}>    <div className="hamburger-phone-list">Contact us</div>  </Link>
-                       <Link to="/projects" style={{textDecoration:'none'}}>   <div className="hamburger-phone-list">Cart</div>    </Link>
+                       <Link to="/cart" style={{textDecoration:'none'}}>   <div className="hamburger-phone-list">Cart</div>    </Link>
                        <div className="phone-profile">Logged in as <br></br> {name} &nbsp; | &nbsp; {email}</div>
                        <div className="phone-log"> 
                         <div className="phone-logout" onClick={handleLogout}> 

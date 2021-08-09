@@ -4,6 +4,7 @@ import { Switch , Route } from 'react-router-dom'
 import Login from './Components/login'
 import Welcome from './Components/Welcome';
 import Signup from './Components/signup';
+import CartPage from './Components/Cart/cartPage';
 // import Signup from './Components/signup'
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
     <div className="App">
 
       <Switch>
-        <Route path="/" exact component={Login} ></Route>
-        <Route path="/welcome" exact component={Welcome} ></Route>
+        <Route path="/login" exact component={Login} ></Route>
+        <Route path="/" exact component={Welcome} ></Route>
         <Route path="/signup" exact component={Signup} ></Route>
+        <Route path="/cart" exact component={CartPage} ></Route>
       </Switch>
 
     </div>

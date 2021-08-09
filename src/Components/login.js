@@ -25,7 +25,7 @@ class Login extends Component {
       })
       .then ( res => {
           if( res.data !== 'failure'){
-              window.location.assign('/welcome')
+              window.location.assign('/')
           }
       })
 
@@ -85,12 +85,12 @@ class Login extends Component {
             if(res.data[0].message === 'success'){
                 localStorage.setItem('token' , res.data[0].token)
                 toast(`Signup successfull`)
-                window.location.assign('/welcome')
+                window.location.assign('/')
             }
             if(res.data[0].message === 'User Already Exists'){
                 localStorage.setItem('token' , res.data[0].token)
                 toast(`Signup successfull`)
-                window.location.assign('/welcome')
+                window.location.assign('/')
             }
             
             if(res.data === 'failure'){

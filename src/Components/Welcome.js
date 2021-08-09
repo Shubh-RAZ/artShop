@@ -22,7 +22,7 @@ const Welcome = () => {
             })
             .then ( res => {
                 if( res.data === 'failure'){
-                    // window.location.assign('/')
+                    window.location.assign('/login')
                     console.log('failed')
                 }
                 else{
@@ -45,7 +45,7 @@ const Welcome = () => {
             })
         }
         else{
-            // window.location.assign('/')
+            window.location.assign('/login')
             console.log('failed')
         }
 

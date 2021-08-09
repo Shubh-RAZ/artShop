@@ -77,7 +77,7 @@ class Signup extends Component {
                 account.passwordCheck = ""
                 this.setState({account})
                 toast(`Signup successfull`)
-                window.location.assign('/')
+                window.location.assign('/login')
                 localStorage.removeItem('token')
             }
             if(res.data[0].message === 'User Already Exists'){
