@@ -160,3 +160,69 @@
     right: 10vw;
   }
 }
+
+.logout {
+  position: absolute;
+  right: 3vw;
+  /* border: 2px solid red; */
+  text-align: right;
+  align-items: right;
+}
+
+.inside-log {
+  position: relative;
+}
+.logout-svg {
+  width: 25px;
+  height: 25px;
+  /* border: 2px solid green; */
+  position: absolute;
+  right: 0;
+  /* float: right; */
+  cursor: pointer;
+}
+
+.phone-profile {
+  color: darkgrey;
+}
+
+.phone-log {
+  display: flex;
+  margin: auto;
+  width: fit-content;
+}
+
+.log-text {
+  margin-left: 10px;
+  color: darkgrey;
+}
+
+.phone-logout {
+  /* border: 2px solid red; */
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  color: darkgrey;
+}
+
+.profile-name {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  font-family: Red Hat Text;
+  font-size: 15px;
+  line-height: 17px;
+  color: #ffffff;
+  /* border: 2px solid red; */
+  width: 300px;
+}
+
+.profile-email {
+  position: absolute;
+  right: 0;
+  top: 47px;
+  font-family: Red Hat Text;
+  font-size: 15px;
+  line-height: 17px;
+  color: #ffffff;
+}
