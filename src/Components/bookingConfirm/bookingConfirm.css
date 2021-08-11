@@ -1,0 +1,25 @@
+.signup-img-confirm {
+  width: 50%;
+  height: 80%;
+}
+
+.signup-left-confirm {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid green; */
+}
+.signup-form-confirm {
+  /* border: 2px solid red; */
+}
+
+@media (max-width: 900px) {
+  .signup-img-confirm {
+    display: none;
+  }
+
+  .signup-left-confirm {
+    width: 100%;
+  }
+}

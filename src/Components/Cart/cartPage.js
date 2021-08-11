@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import Card from "../Card/card";
 import './cartPage.css'
 import CartCard from "../cartCard/cartCard";
+import { Link } from "react-router-dom";
 const CartPage = () => {
 
     const [ confrimed , setConfirmed ] = useState(false)
@@ -26,7 +27,7 @@ const CartPage = () => {
                 </div>
             </div>
 
-            <div className="confirm-all">Confirm All</div>
+          <Link to="/booking" style={{textDecoration:'none'}}>  <div className="confirm-all">Confirm All</div> </Link>
         </div> : <div></div> }
         </React.Fragment>
      );

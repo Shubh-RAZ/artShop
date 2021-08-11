@@ -3,6 +3,7 @@ import Card from '../Card/card';
 import paintingData from '../dataArray/paintingData';
 import React, { useEffect, useState } from 'react';
 import Category from '../Category/Category';
+import CartOrange from '../Assets/cartOrange';
 const Cardbox = () => {
     const [ dataToBeShown , setDataToBeShown ] = useState(paintingData)
     const [ pageNumber , setPageNumber ] = useState(1) 
@@ -39,8 +40,14 @@ const Cardbox = () => {
  
     return ( 
         <React.Fragment>
+                <div className="result-cart">
+                    <div className="result-number">Showing 9 of 49 results</div>
+                    <div className="cart-orange">
+                        <div className="cart-number">1</div>
+                        <CartOrange></CartOrange>
+                    </div>
+            </div>
         <div className="card-box">
-     
             { dataToBeShown.map( dt => (
                        <Card></Card>
             ))

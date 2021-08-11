@@ -6,6 +6,7 @@ import Welcome from './Components/Welcome';
 import Signup from './Components/signup';
 import CartPage from './Components/Cart/cartPage';
 import Home from './Components/Home';
+import BookingConfirm from './Components/bookingConfirm/bookingConfirm';
 // import Signup from './Components/signup'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" exact component={Welcome} ></Route>
         <Route path="/signup" exact component={Signup} ></Route>
         <Route path="/cart" exact component={CartPage} ></Route>
+        <Route path="/booking" exact component={BookingConfirm} ></Route>
       </Switch>
 
     </div>

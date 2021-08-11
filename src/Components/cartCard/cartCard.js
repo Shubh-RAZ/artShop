@@ -4,7 +4,6 @@ import Cart from '../Assets/cart';
 import './cartCard.css'
 import Delete from '../Assets/delete';
 const CartCard = () => {
-
     const [ showDetail , setShowDetail ] = useState(false)
     const [ heartColor , setHeartColor ] = useState(true)
     return ( 
