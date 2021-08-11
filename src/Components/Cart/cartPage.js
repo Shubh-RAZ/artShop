@@ -10,7 +10,7 @@ const CartPage = () => {
         <React.Fragment>
             { !confrimed ? 
         <div className="cart-page">
-            <Navbar secondaryColor="#ef5a50" activeColor="#000" active="cart" ></Navbar>
+            <Navbar secondaryColor="#ef5a50" activeColor="#000"  ></Navbar>
             <div className="cart-content">
                 <div className="cart-desc">Showing 7 results</div>
                 <div className="cart-swipeable-box">

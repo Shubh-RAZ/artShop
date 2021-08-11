@@ -5,6 +5,7 @@ import Login from './Components/login'
 import Welcome from './Components/Welcome';
 import Signup from './Components/signup';
 import CartPage from './Components/Cart/cartPage';
+import Home from './Components/Home';
 // import Signup from './Components/signup'
 
 function App() {

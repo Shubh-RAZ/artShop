@@ -29,14 +29,7 @@ const CartCard = () => {
                     <div className="quantity-number">INR 100</div>
                 </div>
 
-                <div className="plus-minus">
-                    <div className="arith-box">
-                        <p>+</p></div>
-                    <div className="arith-number">1</div>
-                    <div className="arith-box">
-                        <p>-</p>
-                    </div>
-                </div>
+            
                 </div>
     </div>
      );

@@ -5,7 +5,7 @@ import Facebook from '../Assets/facebook'
 const Front = () => {
     return ( 
         <div className="front">
-            <Navbar secondaryColor="#fff" activeColor="#000" active="home" ></Navbar>
+            <Navbar secondaryColor="#fff" activeColor="#000" ></Navbar>
             <div className="homepage-box">
                 <div className="homepage-left">
                     <div className="inside-home-left">

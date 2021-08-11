@@ -8,13 +8,14 @@ const Welcome = () => {
     const [ id , setId ] = useState()
     const [ name , setName ] = useState()
     const [ showName , setShowName ] = useState(false)
-    const [ greeting , setGreeting ] = useState(true)
+    const [ greeting , setGreeting ] = useState(false)
 
     useEffect( () => {
         const token = localStorage.getItem('token')
 
         setTimeout( () => {
             setGreeting(false)
+
         } , 10000)
         if ( token && token.length >= 4){
             axios.post('http://artwindow.herokuapp.com/art/verifyUser', {

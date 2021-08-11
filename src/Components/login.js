@@ -50,7 +50,7 @@ class Login extends Component {
         .then((res) => {
             if( res.data !== 'failure'){
                 localStorage.setItem('token' , res.data)
-                window.location.assign('/welcome')
+                window.location.assign('/')
             }
             else{
                 toast('Please Check Your Credentials')
