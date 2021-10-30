@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import React from 'react';
 import Confirm from "../Assets/confirm";
 import './bookingConfirm.css'
@@ -7,6 +7,8 @@ import Message from "../message";
 import { ToastContainer } from 'react-toastify'
 import '../../../node_modules/react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify'
+import axios from 'axios'
+
 const BookingConfirm = () => {
 
     const [ name , setName ] = useState('')
@@ -15,6 +17,24 @@ const BookingConfirm = () => {
     const [ phoneNumber , setPhoneNumber ] = useState('')
     const [ showResult , setResult ] = useState(false)
     const [ mailSuccess , setMailSuccess ] = useState(false)
+
+    const [ productsConfirm , setProductsConfirm ] = useState()
+
+    const cartItems = localStorage.getItem('cartItems')
+    const cartArray = cartItems.split(",")
+
+    useEffect( () => {
+        axios.post('http://localhost:3500/art/getArtById' ,cartArray)
+        .then( res => {
+            setProductsConfirm(res.data)
+        })
+
+        .catch( err => {
+            console.log('errr in cartpage')
+        })
+    } , [] )
+
+    console.log(productsConfirm)
 
     const handleChange = (e) => {
         if(e.target.name === 'name'){

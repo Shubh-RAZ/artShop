@@ -2,7 +2,10 @@ import './Front.css'
 import Navbar from '../Navbar/Navbar'
 import Instagram from '../Assets/instagram'
 import Facebook from '../Assets/facebook'
+import axios from 'axios'
 const Front = () => {
+
+
     return ( 
         <div className="front">
             <Navbar secondaryColor="#fff" activeColor="#000" ></Navbar>

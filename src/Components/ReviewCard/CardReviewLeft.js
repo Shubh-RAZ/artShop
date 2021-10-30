@@ -10,7 +10,7 @@ const CardReviewLeft = (props) => {
         }
 
         setArray(ary)
-        console.log(array)
+        // console.log(array)
     } , [])
 
 

@@ -25,7 +25,7 @@ const Navbar = (props) => {
                 else{
                     axios.post('http://artwindow.herokuapp.com/art/getUser', {id :res.data})
                     .then ( resp => {
-                        console.log(resp.data)
+                        // console.log(resp.data)
                         setName(resp.data.name)
                         setEmail(resp.data.email)
                     })

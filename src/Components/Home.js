@@ -4,7 +4,10 @@ import Cardbox from './cardBox/Cardbox';
 import Conclude from './Conclude/Conclude';
 import ReviewCard from './ReviewCard/ReviewCard';
 import Category from './Category/Category';
+import { useEffect } from 'react';
 const Home = () => {
+
+  
     return ( 
         <div className="home">
             <Front></Front>

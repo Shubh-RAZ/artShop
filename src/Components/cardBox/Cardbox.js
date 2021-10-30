@@ -4,8 +4,22 @@ import paintingData from '../dataArray/paintingData';
 import React, { useEffect, useState } from 'react';
 import Category from '../Category/Category';
 import CartOrange from '../Assets/cartOrange';
+import axios from 'axios';
 const Cardbox = () => {
     const [ dataToBeShown , setDataToBeShown ] = useState(paintingData)
+ 
+
+    useEffect( () => {
+        
+    axios.get('http://localhost:3500/art/getArt')
+    .then(res =>{
+        setDataToBeShown(res.data)
+    })
+    .catch(err =>{
+        console.log(err)
+    })
+    } , [])
+
     const [ pageNumber , setPageNumber ] = useState(1) 
     const [ totalPaginationIndex , setPaginationIndex ] = useState() 
     const [ array , setArray ] = useState([])
@@ -23,10 +37,11 @@ const Cardbox = () => {
         setArray(ar)
     } , [])
 
+
     const filterData = ( page , maxLength) => {
         const start =  (( page - 1 ) * maxLength )
         const filter = paintingData.filter( (dt , ind) => ( ind >= start && ind < start + maxLength))
-        console.log(filter)
+        // console.log(filter)
         return filter
     }
 
@@ -43,13 +58,13 @@ const Cardbox = () => {
                 <div className="result-cart">
                     <div className="result-number">Showing 9 of 49 results</div>
                     <div className="cart-orange">
-                        <div className="cart-number">1</div>
+                        {/* <div className="cart-number">1</div> */}
                         <CartOrange></CartOrange>
                     </div>
             </div>
         <div className="card-box">
             { dataToBeShown.map( dt => (
-                       <Card></Card>
+                       <Card  data={dt}></Card>
             ))
 }
   
