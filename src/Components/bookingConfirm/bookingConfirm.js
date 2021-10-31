@@ -20,14 +20,21 @@ const BookingConfirm = () => {
 
     const [ productsConfirm , setProductsConfirm ] = useState()
 
-    const cartItems = localStorage.getItem('cartItems')
-    let cartArray = cartItems.split(",")
     
 
-    useEffect( () => {
-        
-
-    } , [] )
+        const cartItems = localStorage.getItem('cartItems')
+        const cartArray = cartItems.split(",")
+    
+        useEffect( () => {
+            axios.post('http://localhost:3500/art/getArtById' ,cartArray)
+            .then( res => {
+                setProductsConfirm(res.data)
+            })
+    
+            .catch( err => {
+                console.log('errr in cartpage')
+            })
+        } , [] )
 
     console.log(productsConfirm)
 
@@ -78,14 +85,13 @@ const BookingConfirm = () => {
 
 
     const handleSubmit = (e) =>{
-        cartArray = cartArray.filter(item => item !== 'undefined'   )
 
         const data1 = {
             name_ : name,
             email_ : email,
             add : address,
             ph : phoneNumber,
-            item : cartArray
+            item : productsConfirm
         }
 
         const data = {
@@ -99,15 +105,20 @@ const BookingConfirm = () => {
 
 
         if(error){
+            setMailSuccess(false)
             toast(`Please Check Your Data Once Again`)
+
         }
         else{
             axios.post('http://localhost:3500/art/mail' ,data1)
             .then( res => {
                 setProductsConfirm(res.data)
+                setMailSuccess(true)
+
             })
 
             .catch( err => {
+            setMailSuccess(false)
                 console.log('errr in cartpage')
             })
         }
