@@ -20,7 +20,7 @@ class Login extends Component {
 
     componentDidMount() {
       const token = localStorage.getItem('token')
-      axios.post('http://artwindow.herokuapp.com/art/verifyUser', {
+      axios.post('http://localhost:3500/art/verifyUser', {
           token
       })
       .then ( res => {
@@ -46,7 +46,7 @@ class Login extends Component {
             email : this.state.account.email,
             password : this.state.account.password,
         }
-        axios.post('http://artwindow.herokuapp.com/art/loginUser', data)
+        axios.post('http://localhost:3500/art/loginUser', data)
         .then((res) => {
             if( res.data !== 'failure'){
                 localStorage.setItem('token' , res.data)
@@ -81,7 +81,7 @@ class Login extends Component {
                 email : result.email,
                 name: result.familyName
             }
-            const res = await axios.post('http://artwindow.herokuapp.com/art/createUser', data);
+            const res = await axios.post('http://localhost:3500/art/createUser', data);
             if(res.data[0].message === 'success'){
                 localStorage.setItem('token' , res.data[0].token)
                 toast(`Signup successfull`)
@@ -116,18 +116,18 @@ class Login extends Component {
             <>
                  <ToastContainer></ToastContainer>
             <div className="login-whole">
-
-                <div className="left-img-login">
+{/* 
+                <div className="left-img-login" style={{opacity:'0'}}>
                     <img src="./login.png" className="login"></img>
-                </div>
-            <form className="login-form">
-                <div className="login-title">Artista </div>
-                <div className="email-login" >Email</div>
-                <input name="email" type="mail" className="input-email-login" value={this.state.account.email} onChange={this.handleChange}></input>
+                </div> */}
+            <form className="login-form" style={{display:'grid',justifyContent:'center',alignItems:'center',margin:'auto'}}>
+                <div className="login-title">Gamer </div>
+                {/* <div className="email-login" >Email</div>
+                <input name="email" type="mail" className="input-email-login" style={{background:'none'}}value={this.state.account.email} onChange={this.handleChange}></input>
                 <div className="password-login">Password</div>
-                <input name="password" className="input-password-login" type="password" value={this.state.account.password} onChange={this.handleChange}></input>
+                <input name="password" className="input-password-login" type="password" value={this.state.account.password} onChange={this.handleChange}></input> */}
                 <div className="btns-login-flex">
-                <div type="submit" onClick={this.handleSubmit} className="login-btn">Login</div>
+                {/* <div type="submit" onClick={this.handleSubmit} className="login-btn">Login</div> */}
                 {/* <img src={this.state.account.imageUrl} alt="img" style={{borderRadius:'50%'}}/> */}
                 {/* <button type="submit" onClick={this.handleSubmit}>Login</button> */}
                 {/*  */}
@@ -143,12 +143,12 @@ class Login extends Component {
                 />
 
                 </div>
-
+{/* 
           <Link to="/signup" style={{textDecoration:'none'}} >      <div className="dont-account">
                     Don't Have An Acoount ?
                 </div>
 
-                </Link>
+                </Link> */}
             </form>
             </div>
             </>

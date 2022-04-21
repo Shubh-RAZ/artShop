@@ -1,9 +1,18 @@
-import Abstract from '../Assets/abstract'
-import Landscape from '../Assets/Landscape'
-import Lord from '../Assets/lord'
-import Potrait from '../Assets/potrait'
+// import Abstract from '../Assets/abstract'
+// import Landscape from '../Assets/Landscape'
+// import Lord from '../Assets/lord'
+// import Potrait from '../Assets/potrait'
+import Baby from '../Assets/baby.js'
+import Kid from '../Assets/kid.js'
+import Allages from '../Assets/allages.js'
+import Video from '../Assets/Video.js'
+
 import './Category.css'
-const Category = () => {
+const Category = (props) => {
+
+    const handleCategory = (e) => {
+        props.handleCat(e)
+    }
     return ( 
         <div className="category">
             <div className="category-heading">
@@ -11,48 +20,48 @@ const Category = () => {
             </div>
 
             <div className="category-slide">
-                <div className="category-list">
+                <div className="category-list" onClick={ () => {handleCategory('baby toys')}} >
                     <div className="category-svg">
-                        <Potrait></Potrait>
+                        <Baby></Baby>
                     </div>
 
                     <div className="category-name">
-                        Landscape 
+                        Baby 
                         <br></br>
-                        Painting
+                        Toys
                     </div>
                 </div>
-                <div className="category-list">
+                <div className="category-list" onClick={ () => {handleCategory('kids toys')}}>
                     <div className="category-svg">
-                        <Landscape></Landscape>
+                        <Kid></Kid>
                     </div>
 
                     <div className="category-name">
-                        Potrait 
+                        Kids
                         <br></br>
-                        Painting
+                        Toys
                     </div>
                 </div>
-                <div className="category-list">
+                <div className="category-list" onClick={ () => {handleCategory('All ages')}} >
                     <div className="category-svg">
-                        <Abstract></Abstract>
+                        <Allages></Allages>
                     </div>
 
                     <div className="category-name">
-                        Abstract
+                        All Ages
                         <br></br>
-                        Painting
+                        Toys
                     </div>
                 </div>
-                <div className="category-list">
+                <div className="category-list" onClick={ () => {handleCategory('video games and consoles')}}>
                     <div className="category-svg">
-                        <Lord></Lord>
+                        <Video></Video>
                     </div>
 
                     <div className="category-name">
-                        Lord 
+                        Video
                         <br></br>
-                        Painting
+                        Games
                     </div>
                 </div>
             </div>

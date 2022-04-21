@@ -4,15 +4,21 @@ import Cardbox from './cardBox/Cardbox';
 import Conclude from './Conclude/Conclude';
 import ReviewCard from './ReviewCard/ReviewCard';
 import Category from './Category/Category';
-import { useEffect } from 'react';
+import { useEffect , useState } from 'react';
 const Home = () => {
+
+    const [ category, setCategory] = useState('All ages')
+
+    const giveCategory = (e) => {
+        setCategory(e)
+    }
 
   
     return ( 
         <div className="home">
             <Front></Front>
-            <Category></Category>
-            <Cardbox></Cardbox>
+            <Category handleCat={giveCategory}></Category>
+            <Cardbox category={category}></Cardbox>
             <ReviewCard></ReviewCard>
             <Conclude></Conclude>
         </div>

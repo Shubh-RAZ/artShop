@@ -12,10 +12,10 @@ const Front = () => {
             <div className="homepage-box">
                 <div className="homepage-left">
                     <div className="inside-home-left">
-                        <div className="heading-1">We Make art </div>
+                        <div className="heading-1">We Sell Games </div>
                         <div className="heading-1">for you </div>
-                        <div className="desc-1">Lorem ipsum dummy</div>
-                        <div className="desc-2">text generator</div>
+                        <div className="desc-1">The Best Seller</div>
+                        <div className="desc-2">In India</div>
 
                         <div className="social-connect">
                             <div className="connect-slogan">Connect with us</div>

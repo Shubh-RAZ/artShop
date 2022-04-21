@@ -5,6 +5,8 @@
   /* border: 2px solid red; */
   display: flex;
   align-items: center;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
 }
 
 .inside-box {
@@ -113,6 +115,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  /* border: 2px solid red; */
 }
 
 .desc {

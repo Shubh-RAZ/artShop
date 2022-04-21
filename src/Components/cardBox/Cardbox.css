@@ -3,7 +3,7 @@
   width: 100vw;
   flex-wrap: wrap;
   overflow: hidden;
-  /* justify-content: center; */
+  justify-content: space-around;
   text-align: left;
   /* border: 2px solid red; */
 }

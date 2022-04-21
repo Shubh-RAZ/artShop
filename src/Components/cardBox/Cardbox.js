@@ -1,24 +1,34 @@
 import './Cardbox.css'
 import Card from '../Card/card';
-import paintingData from '../dataArray/paintingData';
+// import paintingData from '../dataArray/paintingData';
 import React, { useEffect, useState } from 'react';
 import Category from '../Category/Category';
 import CartOrange from '../Assets/cartOrange';
 import axios from 'axios';
-const Cardbox = () => {
-    const [ dataToBeShown , setDataToBeShown ] = useState(paintingData)
- 
+const Cardbox = (props) => {
+    const [ paintingData , setPaintingData ] = useState([])
+    const [dataToBeShown , setDataToBeShown ] = useState([])
 
     useEffect( () => {
         
-    axios.get('http://localhost:3500/art/getArt')
-    .then(res =>{
-        setDataToBeShown(res.data)
-    })
-    .catch(err =>{
-        console.log(err)
-    })
-    } , [])
+        axios.get('http://localhost:3500/art/getArt')
+        .then(res =>{
+            setPaintingData(res.data)
+            setDataToBeShown(res.data)
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+        } , [])
+
+    useEffect( () => {
+        const filtered = paintingData.filter( dt =>  dt.category === props.category)
+        setDataToBeShown(filtered)
+        // console.log(filtered)
+    },[props.category])
+ 
+
+
 
     const [ pageNumber , setPageNumber ] = useState(1) 
     const [ totalPaginationIndex , setPaginationIndex ] = useState() 
@@ -26,7 +36,7 @@ const Cardbox = () => {
 
     useEffect( () => {
         const filtered = filterData(1,12)
-        setDataToBeShown(filtered)
+        setPaintingData(filtered)
         setPaginationIndex((paintingData.length/12 + 1))
         var ar= []
         var i
@@ -49,9 +59,11 @@ const Cardbox = () => {
         setPageNumber(page)
         const filtered = filterData(page ,12)
         console.log(filtered)
-        setDataToBeShown(filtered)
+        setPaintingData(filtered)
     }
 
+    // console.log(dataToBeShown)
+    console.log(props.category)
  
     return ( 
         <React.Fragment>
