@@ -8,7 +8,7 @@ const Welcome = () => {
     const [ id , setId ] = useState()
     const [ name , setName ] = useState()
     const [ showName , setShowName ] = useState(false)
-    const [ greeting , setGreeting ] = useState(false)
+    const [ greeting , setGreeting ] = useState(true)
 
     useEffect( () => {
         const token = localStorage.getItem('token')

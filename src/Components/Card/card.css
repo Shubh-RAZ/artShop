@@ -87,6 +87,7 @@
   display: flex;
   width: 90%;
   /* margin: auto; */
+  margin-top: 20px;
   margin-bottom: 20px;
   border: 2px solid #c4c4c4;
   border-top-style: none;
@@ -106,7 +107,7 @@
   font-family: Red Hat Display;
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 30px;
   /* identical to box height */
   color: #ffffff;
@@ -122,14 +123,20 @@
   font-family: Red Hat Display;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 25px;
+  max-height: 150px;
+  overflow: scroll;
   /* identical to box height */
   color: #ffffff;
   text-transform: capitalize;
   width: 90%;
   /* margin: auto; */
   margin-bottom: 20px;
+}
+
+.desc::-webkit-scrollbar{
+  width: 0;
 }
 
 .heart-count {

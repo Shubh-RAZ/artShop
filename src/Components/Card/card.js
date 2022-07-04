@@ -21,7 +21,7 @@ const Card = (props) => {
     return ( 
         <div className="box" >
             <div className="inside-box"  onMouseOver={ () => setShowDetail(true)} onMouseLeave={ () => setShowDetail(false)}  >
-                <img src={props.data.location} style={{filter:showDetail ? 'blur(2px)' : null}}></img>
+                <img src="./art.jpg" style={{filter:showDetail ? 'blur(2px)' : null}}></img>
                 <div className="details-img" style={{animation: showDetail ? 'up 2s linear 1 forwards' : 'down 2s linear forwards' , transition:'all 2s'} }>
                     <div className="content-img-box">
                         <div>

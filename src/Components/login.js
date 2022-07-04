@@ -116,21 +116,21 @@ class Login extends Component {
             <>
                  <ToastContainer></ToastContainer>
             <div className="login-whole">
-{/* 
-                <div className="left-img-login" style={{opacity:'0'}}>
-                    <img src="./login.png" className="login"></img>
-                </div> */}
+
+                <div className="left-img-login" >
+                    <img src="./login.png" className="login" style={{minWidth:'500px'}}></img>
+                </div>
             <form className="login-form" style={{display:'grid',justifyContent:'center',alignItems:'center',margin:'auto'}}>
                 <div className="login-title">Gamer </div>
-                {/* <div className="email-login" >Email</div>
+                <div className="email-login" >Email</div>
                 <input name="email" type="mail" className="input-email-login" style={{background:'none'}}value={this.state.account.email} onChange={this.handleChange}></input>
                 <div className="password-login">Password</div>
-                <input name="password" className="input-password-login" type="password" value={this.state.account.password} onChange={this.handleChange}></input> */}
+                <input name="password" className="input-password-login" type="password" value={this.state.account.password} onChange={this.handleChange}></input>
                 <div className="btns-login-flex">
-                {/* <div type="submit" onClick={this.handleSubmit} className="login-btn">Login</div> */}
-                {/* <img src={this.state.account.imageUrl} alt="img" style={{borderRadius:'50%'}}/> */}
-                {/* <button type="submit" onClick={this.handleSubmit}>Login</button> */}
-                {/*  */}
+                <div type="submit" onClick={this.handleSubmit} className="login-btn">Login</div>
+                {/* <img src={this.state.account.imageUrl} alt="img" style={{borderRadius:'50%'}}/>s */}
+         
+                
                 <GoogleLogin
                     clientId="695016441089-rrvns23b8bu4e37cttalfjutgfc4n74p.apps.googleusercontent.com"
                     render={renderProps => (

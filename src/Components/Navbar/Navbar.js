@@ -14,7 +14,7 @@ const Navbar = (props) => {
         const token = localStorage.getItem('token')
 
         if ( token && token.length >= 4){
-            axios.post('http://localhost:3500//art/verifyUser', {
+            axios.post('http://localhost:3500/art/verifyUser', {
                 token
             })
             .then ( res => {
@@ -23,7 +23,8 @@ const Navbar = (props) => {
                     console.log('failed')
                 }
                 else{
-                    axios.post('http://localhost:3500//art/getUser', {id :res.data})
+                    console.log(res.data)
+                    axios.post('http://localhost:3500/art/getUser', {id :res.data})
                     .then ( resp => {
                         // console.log(resp.data)
                         setName(resp.data.name)
@@ -31,14 +32,15 @@ const Navbar = (props) => {
                     })
             
                     .catch( err => {
-                        console.log(err)
+                        // console.log(err)
                     })
             
                 }
             })
       
             .catch( err => {
-                console.log(err)
+                // console.log(err)
+                console.log('failed in ctch')
             })
         }
      

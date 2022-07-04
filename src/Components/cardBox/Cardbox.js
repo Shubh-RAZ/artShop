@@ -63,7 +63,7 @@ const Cardbox = (props) => {
     }
 
     // console.log(dataToBeShown)
-    console.log(props.category)
+    // console.log(props.category)
  
     return ( 
         <React.Fragment>

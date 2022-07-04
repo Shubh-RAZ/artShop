@@ -13,7 +13,7 @@
 
   text-align: left;
   margin-bottom: 20px;
-  color: #ef5a50;
+  color: #6C63FF;
 }
 .login-whole {
   width: 100vw;
@@ -49,7 +49,7 @@
 }
 
 .input-email-login {
-  background: #ef5a50 !important;
+  background: #6C63FF !important;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -60,7 +60,7 @@
 }
 
 .input-password-login {
-  background: #ef5a50!important;
+  background: #6C63FF!important;
   border-radius: 10px;
   border: none;
   outline: none;
