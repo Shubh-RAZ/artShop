@@ -21,12 +21,12 @@ const Card = (props) => {
     return ( 
         <div className="box" >
             <div className="inside-box"  onMouseOver={ () => setShowDetail(true)} onMouseLeave={ () => setShowDetail(false)}  >
-                <img src="./art.jpg" style={{filter:showDetail ? 'blur(2px)' : null}}></img>
+                <img src={props.data.location} style={{filter:showDetail ? 'blur(2px)' : null}}></img>
                 <div className="details-img" style={{animation: showDetail ? 'up 2s linear 1 forwards' : 'down 2s linear forwards' , transition:'all 2s'} }>
                     <div className="content-img-box">
                         <div>
                             <div className="title">
-                                <div className="title-name">new</div>
+                                <div className="title-name">{props.data.title}</div>
                                 <div className="heart" onClick={ () => {
                                     setHeartColor(!heartColor)
                                     }}><Heart color={heartColor ? '#fff' : '#ef5a50'}  ></Heart></div>

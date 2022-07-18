@@ -2,10 +2,10 @@
 // import Landscape from '../Assets/Landscape'
 // import Lord from '../Assets/lord'
 // import Potrait from '../Assets/potrait'
-import Baby from '../Assets/baby.js'
-import Kid from '../Assets/kid.js'
-import Allages from '../Assets/allages.js'
-import Video from '../Assets/Video.js'
+import Landscape from '../Assets/landscape'
+import Lord from '../Assets/lord'
+import Portrait from '../Assets/portrait'
+import All from '../Assets/All'
 
 import './Category.css'
 const Category = (props) => {
@@ -20,40 +20,52 @@ const Category = (props) => {
             </div>
 
             <div className="category-slide">
-                <div className="category-list" onClick={ () => {handleCategory('baby toys')}} >
+            <div className="category-list" onClick={ () => {handleCategory('All')}} >
                     <div className="category-svg">
-                        <Baby></Baby>
+                        <All></All>
                     </div>
 
                     <div className="category-name">
-                        Baby 
+                        All
                         <br></br>
-                        Toys
+                        Paintings
                     </div>
                 </div>
-                <div className="category-list" onClick={ () => {handleCategory('kids toys')}}>
+
+                <div className="category-list" onClick={ () => {handleCategory('Landscape')}} >
                     <div className="category-svg">
-                        <Kid></Kid>
+                        <Landscape></Landscape>
                     </div>
 
                     <div className="category-name">
-                        Kids
+                        Landscape 
                         <br></br>
-                        Toys
+                        Paintings
                     </div>
                 </div>
-                <div className="category-list" onClick={ () => {handleCategory('All ages')}} >
+                <div className="category-list" onClick={ () => {handleCategory('God')}}>
                     <div className="category-svg">
-                        <Allages></Allages>
+                        <Lord></Lord>
                     </div>
 
                     <div className="category-name">
-                        All Ages
+                        God
                         <br></br>
-                        Toys
+                        Paintings
                     </div>
                 </div>
-                <div className="category-list" onClick={ () => {handleCategory('video games and consoles')}}>
+                <div className="category-list" onClick={ () => {handleCategory('Portrait')}} >
+                    <div className="category-svg">
+                        <Portrait></Portrait>
+                    </div>
+
+                    <div className="category-name">
+                        Portrait
+                        <br></br>
+                        Paintings
+                    </div>
+                </div>
+                {/* <div className="category-list" onClick={ () => {handleCategory('video games and consoles')}}>
                     <div className="category-svg">
                         <Video></Video>
                     </div>
@@ -63,7 +75,7 @@ const Category = (props) => {
                         <br></br>
                         Games
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
      );

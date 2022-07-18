@@ -1,0 +1,437 @@
+[
+    {
+        "title":"life is beautiful",
+        "description":"mini canvas",
+        "hearts":0,
+        "location":"./B612_20220310_213739_426.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"composition object",
+        "description":"watercolor illustration on A4 sheet",
+        "hearts":0,
+        "location":"./IMG_20220714_010621.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"blue abstract",
+        "description":"spill art on canvas board",
+        "hearts":0,
+        "location":"./B612_20211023_203645_713.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"orange abstract",
+        "description":"spill art on canvas board",
+        "hearts":0,
+        "location":"./B612_20211023_203755_623.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"bookmark",
+        "description":"watercolor scenery",
+        "hearts":0,
+        "location":"./DSC00478.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":" Flow",
+        "description":"Illustration on 10X11cm sheet",
+        "hearts":0,
+        "location":"./DSC00499.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"warm illustration",
+        "description":"Illustration on 10X11cm sheet",
+        "hearts":0,
+        "location":"./DSC00584.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"green illustration",
+        "description":"Illustration on 10X11cm sheet",
+        "hearts":0,
+        "location":"./DSC00578.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"grey illustration",
+        "description":"Illustration on 10X11cm sheet",
+        "hearts":0,
+        "location":"./DSC00586.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"villa",
+        "description":"Illustration on A4 sheet",
+        "hearts":0,
+        "location":"./IMG_20220107_212530_853.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"Mandala sunset",
+        "description":"Illustration on A5 sheet",
+        "hearts":0,
+        "location":"./DSC00471.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"mandala scenery",
+        "description":"Illustration on A5 sheet",
+        "hearts":0,
+        "location":"./DSC00515.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"Polaroid eye",
+        "description":"Illustration on handmade sheet sheet",
+        "hearts":0,
+        "location":"./DSC00523.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"Killed heart",
+        "description":"Illustration on A5 sheet",
+        "hearts":0,
+        "location":"./DSC00526.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"The Crying eye",
+        "description":"Pencil color sketching on A5 sheet",
+        "hearts":0,
+        "location":"./DSC06320.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"The green eye",
+        "description":"Pencil color sketching on A4 sheet",
+        "hearts":0,
+        "location":"./IMG_20220318_202716_556.jpg",
+        "category":"Some more art"
+      },
+      {
+        "title":"River pass",
+        "description":"watercolor on A4  handmade paper",
+        "hearts":0,
+        "location":"./DSC00494.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"Mini house",
+        "description":"watercolor on A6  handmade paper",
+        "hearts":0,
+        "location":"./DSC00528.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"coconut tress",
+        "description":"watercolor on 21 X 14 cm  handmade paper",
+        "hearts":0,
+        "location":"./DSC00510.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"field amd sunrise",
+        "description":"watercolor on A5  handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210619_211329_672.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"mini waterfall",
+        "description":"watercolor on 21 X 14 cm  handmade paper",
+        "hearts":0,
+        "location":"./B612_20220717_230236_978.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"way of laitlum",
+        "description":"watercolor on 21 X 14 cm  handmade paper",
+        "hearts":0,
+        "location":"./DSC07180.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"laitlum",
+        "description":"watercolor on 21 X 14 cm  handmade paper",
+        "hearts":0,
+        "location":"./DSC07228.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"ram krishna mission",
+        "description":"watercolor on 21 X 14 cm  handmade paper",
+        "hearts":0,
+        "location":"./IMG_20220405_132911_815.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"sea and shore",
+        "description":"watercolor on 21 X 14 cm  handmade paper",
+        "hearts":0,
+        "location":"./IMG_20220502_230106_619.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"somewhere in a village",
+        "description":"watercolor on A5 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_223127_131.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"pink sky",
+        "description":"watercolor on A5 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_215946_137.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"scary sea",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_214324_369.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"galaxy",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_214246_359.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"into the woods",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_214359_173.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"corner of a river side",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_213433_199.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"anjuna beach",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_200638_804.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"night and snow",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_200100_039.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"lake",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210620_183238_647.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"sun rise",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210621_182644_324.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"A walk in garden",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210623_202255_005.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"way in snow",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210624_202556_181.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"Forest and lake",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_213929_475.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"peace around sea",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_213306_064.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"mardi snow",
+        "description":"watercolor on A5 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210614_200139_329.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"river side",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210618_185239_112.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"dusk",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210617_183628_844.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"water around",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_201353_052.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"monsoon",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210615_182102_382.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"sky and love",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210612_185221_386.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"sunset in forest",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210611_191509_430.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"sun-set",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./DSC00507.jpg",
+        "category":"Landscape"
+      },
+      {
+        "title":"Mardi himal trek",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_192404_560.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"hills",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_192207_693.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"Snow and rock",
+        "description":"watercolor on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210728_190904_910.webp",
+        "category":"Landscape"
+      },
+      {
+        "title":"the inner peace",
+        "description":"Watercolor on a A2 handmade paper",
+        "hearts":0,
+        "location":"./B612_20220717_230137_953.jpg",
+        "category":"God"
+      },
+      {
+        "title":"Inlightment",
+        "description":"Acrylic color on canvas sheet",
+        "hearts":0,
+        "location":"./InShot_20210915_200552518.jpg",
+        "category":"God"
+      },
+      {
+        "title":"Sai baba",
+        "description":"Acrylic color on canvas sheet",
+        "hearts":0,
+        "location":"./InShot_20220718_031122744.jpg",
+        "category":"God"
+      },
+      {
+        "title":"The Barbie",
+        "description":"Acrylic illustration on A3 canvas sheert",
+        "hearts":0,
+        "location":"./IMG_20210824_010637.jpg",
+        "category":"Portrait"
+      },
+      {
+        "title":"The red portrait",
+        "description":"Acrylic Art on A3 canvas sheet",
+        "hearts":0,
+        "location":"./IMG_20210827_200443_664.webp",
+        "category":"Portrait"
+      },
+      {
+        "title":"slay",
+        "description":"watercolor on A4 handmade sheet",
+        "hearts":0,
+        "location":"./InShot_20210521_164216840.jpg",
+        "category":"Portrait"
+      },
+      {
+        "title":"Escaping",
+        "description":"Acrylic art on A3 canvas sheet",
+        "hearts":0,
+        "location":"./IMG_20210823_233657.jpg",
+        "category":"Portrait"
+      },
+      {
+        "title":"In my dreams",
+        "description":" Acrylic art on A3  sheet",
+        "hearts":0,
+        "location":"./InShot_20210521_163955404.jpg",
+        "category":"Portrait"
+      },
+      {
+        "title":"soul is greater than body",
+        "description":"Watercolor illustration on A4 handmade paper",
+        "hearts":0,
+        "location":"./IMG_20210823_234336.jpg",
+        "category":"Portrait"
+      },
+      {
+        "title":"Nari",
+        "description":"Acrylic art on A3 canvas sheet",
+        "hearts":0,
+        "location":"./IMG_20210824_010743.jpg",
+        "category":"Portrait"
+      },
+      {
+        "title":"Trust",
+        "description":"Illustration on a4 sheet",
+        "hearts":0,
+        "location":"./IMG_20210728_224208_161.webp",
+        "category":"Portrait"
+      },
+      {
+        "title":"focus",
+        "description":"Illustration on a4 sheet",
+        "hearts":0,
+        "location":"./DSC00532.jpg",
+        "category":"Portrait"
+      }
+
+]

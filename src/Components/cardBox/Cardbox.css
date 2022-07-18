@@ -5,6 +5,7 @@
   overflow: hidden;
   justify-content: space-around;
   text-align: left;
+  margin-bottom: 50px;
   /* border: 2px solid red; */
 }
 
@@ -50,8 +51,11 @@
 .pagination {
   display: flex;
   width: fit-content;
+  width: 50%;
+  max-width: 500px;
   margin: auto;
-  /* border: 2px solid red; */
+  justify-content: space-evenly;
+  /* border: 2px solid green; */
 }
 
 .pagination-list {
@@ -59,25 +63,36 @@
   height: 30px;
   border: 2px solid salmon;
   border-radius: 50%;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   color: salmon;
-  margin-right: 35px;
+  /* margin-right: 35px; */
   cursor: pointer;
+  /* border: 2px solid red; */
 }
 
+.pagination-list div{
+  position: relative;
+  bottom: -2px;
+}
+
+.pagination-list-active div{
+  position: relative;
+  bottom: -2px;
+}
 .pagination-list-active {
   cursor: pointer;
   width: 30px;
   height: 30px;
   border: 2px solid black;
   border-radius: 50%;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   color: black;
-  margin-right: 15px;
+  /* margin-right: 15px; */
+  /* border: 2px solid red; */
 }
 
 @media (max-width: 1200px) {

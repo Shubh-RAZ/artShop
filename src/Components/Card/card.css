@@ -11,6 +11,7 @@
 
 .inside-box {
   width: 90%;
+  max-width: 300px;
   margin: auto;
   height: 90%;
   /* border: 2px solid green; */

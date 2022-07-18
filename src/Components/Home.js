@@ -7,7 +7,7 @@ import Category from './Category/Category';
 import { useEffect , useState } from 'react';
 const Home = () => {
 
-    const [ category, setCategory] = useState('All ages')
+    const [ category, setCategory] = useState('All')
 
     const giveCategory = (e) => {
         setCategory(e)
