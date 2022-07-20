@@ -6,11 +6,11 @@ const Conclude = () => {
     return ( 
         <div className="conclude">
             <div className="conclude-slogan">
-                <div className="text-conclude">Toys</div>
+                <div className="text-conclude">Paintings</div>
                 <div className="flask"> <Flask></Flask></div>
                 <div className="text-conclude">with</div>
                 <div className="heart-conclude"><Heart color="salmon"></Heart></div>
-                <div className="text-conclude">By Team 007</div>
+                <div className="text-conclude">By Aparna</div>
                 <div className="dino-conclude">
                 <Dino></Dino>
             </div>

@@ -3,130 +3,73 @@ import Card from '../Card/card';
 import React, { useEffect, useState } from 'react';
 import Category from '../Category/Category';
 import CartOrange from '../Assets/cartOrange';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 const Cardbox = (props) => {
     const [ paintingData , setPaintingData ] = useState([])
     const [dataToBeShown , setDataToBeShown ] = useState([])
     const [paginatedFilteredData,setPaginatedFilteredData] = useState([])
+    const [array,setArray] = useState([])
+    const [pageNumber,setPageNumber] = useState(1)
+    const [categorySize,setCategorySize] = useState()
 
-    useEffect( () => {
-
-        console.log('get data')
-        
-        axios.get('http://localhost:3500/art/getArt')
-        .then(res =>{
-            setPaintingData(res.data)
-            setDataToBeShown(res.data)
-
-        })
-        .catch(err =>{
-            console.log(err)
-        })
-        } , [])
-
-    useEffect( () => {
-
-        axios.get('http://localhost:3500/art/getArt')
-        .then(res =>{
-            setPaintingData(res.data)
-            setDataToBeShown(res.data)
-
-           
-            if(props.category === "All"){
-                const paginatedFilteredData = filterData(res.data,pageNumber,12)
-                console.log('paginated filtered',paginatedFilteredData)
-                setPaginatedFilteredData(paginatedFilteredData)
-            }
-            else{
-                const filtered = res.data.filter( dt =>  dt.category === props.category)
-                const paginatedFilteredData = filterData(filtered,pageNumber,12)
-                setPaginatedFilteredData(paginatedFilteredData)
-            }
-
-        })
-        .catch(err =>{
-            console.log(err)
-        })
-
-        console.log('categorys')
-       
-    },[props.category])
- 
-
-
-
-    const [ pageNumber , setPageNumber ] = useState(1) 
-    const [ totalPaginationIndex , setPaginationIndex ] = useState() 
-    const [ array , setArray ] = useState([])
-
-    
     const filterData = ( data, page, maxLength) => {
         const start =  (( page - 1 ) * maxLength )
-        // const filter = data.filter( (dt , ind) => ( ind >= start && ind < start + maxLength) )
-        let filter = []
-        console.log('data',data)
-        data.map( (dt,ind) => {
-            if(ind >= start && ind < start + maxLength){
-                filter.push(dt)
-            }
-        })
-        // console.log(filter)
+        const filter = data.filter( (dt , ind) => ( ind >= start && ind < start + maxLength) )
         return filter
     }
 
-    const handlePagination = (page) => {
-        setPageNumber(page)
-    }
+        useEffect ( async ()=> {
+            await axios.get('http://localhost:3500/art/getArt')
+                .then(res =>{
+                    // console.log('get data')
+                    setPaintingData(res.data)
+                    let filterCategory
+                    if(props.category === 'All'){
+                        filterCategory = res.data
+                    }
+                    else{
+                        filterCategory = res.data.filter( dt => dt.category == props.category)
+                    }
+                    let i
+                    let arr = [] 
+                    setCategorySize(filterCategory.length)
+                    for( i=1;i <= (filterCategory.length/12 + 1);i++){
+                        arr.push(i)
+                    }
+                    setArray(arr)
+                    setDataToBeShown(filterCategory)
+                    const paginatedFilteredData = filterData(filterCategory,pageNumber,12)
+                    setPaginatedFilteredData(paginatedFilteredData)
+                    
 
-    useEffect( () => {
-        // const filtered = filterData(dataToBeShown,1,12)
-        // console.log('page number')
-        // console.log(paintingData)
-        // console.log('category filter',categoryFilter)
-        axios.get('http://localhost:3500/art/getArt')
-        .then(res =>{
-            setPaintingData(res.data)
-            setDataToBeShown(res.data)
-
-            if(props.category === "All"){
-                const paginatedFilteredData = filterData(res.data,pageNumber,12)
-                console.log('paginated filtered',paginatedFilteredData)
-                setPaginatedFilteredData(paginatedFilteredData)
-            }
-            else{
-                const filtered = res.data.filter( dt =>  dt.category === props.category)
-                const paginatedFilteredData = filterData(filtered,pageNumber,12)
-                setPaginatedFilteredData(paginatedFilteredData)
-            }
-
-        })
-        .catch(err =>{
-            console.log(err)
-        })
         
-        setPaginationIndex((paintingData.length/12 + 1))
-        var ar= []
-        var i
-        for( i = 1 ; i <= ( paintingData.length / 12 + 1) ; i++){
-            ar.push(i)
+                })
+                .catch(err =>{
+                    console.log(err)
+                })
+            
+            // console.log('category changed')
+            // console.log(paintingData)
+        },[props.category,pageNumber])
+
+
+        const handlePagination =(page) => {
+            // console.log(page)
+            setPageNumber(page)
         }
-
-        setArray(ar)
-    } , [pageNumber])
-
-
-
-    // console.log(dataToBeShown)
-    // console.log(props.category)
- 
     return ( 
         <React.Fragment>
                 <div className="result-cart">
-                    <div className="result-number">Showing 9 of 49 results</div>
+                    <div className="result-number">Showing {categorySize <12 ? categorySize:12} of {categorySize} results</div>
+                    <Link to="/cart" style={{textDecoration:'none'}}>
                     <div className="cart-orange">
                         {/* <div className="cart-number">1</div> */}
                         <CartOrange></CartOrange>
                     </div>
+                    </Link>
+                  
+                   
             </div>
         <div className="card-box">
             { paginatedFilteredData.map( dt => (

@@ -11,8 +11,10 @@ const Home = () => {
 
     const giveCategory = (e) => {
         setCategory(e)
+     
     }
 
+ 
   
     return ( 
         <div className="home">
